@@ -167,10 +167,12 @@ db.COLLECTION.drop()    # where COLLECTION is the name of your collection
 
 After successfully importing all complete records contained in all the files, determine how many documents have been imported into your collection. You may want to compare this against an actual count of complete, individual JSON records in the `data/`directory. (This may require a little bit of side coding of its own!)
 
-Note the number of records you can successfully impormt in a file named `count.txt` and add it to your repository.
+NOTE: You may want to investigate your errors to determinte the underlying cause, which may lead you to modify your code/approach even more **SO AS TO IMPORT AS MANY COMPLETE RECORDS AS POSSIBLE** from within the set of 50 files.
+
+Note the number of records you can successfully import in a file named `count.txt` and add it to your repository.
 
 ## 9. Submit
 
-Add, commit, and push all of your code and the `count.txt` file to your fork of the repository.
+Add, commit, and push your working script and the `count.txt` file to your fork of the repository.
 
-Submit your GitHub URL for grading.
+Submit the GitHub URL of your fork for grading.
