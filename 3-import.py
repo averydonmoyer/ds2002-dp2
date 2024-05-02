@@ -12,11 +12,6 @@ client = MongoClient(uri, username='hdj3fw', password=MONGOPASS, connectTimeoutM
 db = client.hdj3fw
 collection = db.dp2_test
 
-# set up trackers 
-imported = 0 
-orphaned = 0 
-corrupted = 0
-
 directory = "data/" 
 
 # write the loop  
@@ -24,8 +19,8 @@ for filename in os.listdir(directory):
      with open(os.path.join(directory, filename)) as f: 
         try: 
             file_data = json.load(f)
-            try: 
-                if isinstance(file_data, list):
+            if isinstance(file_data, list):
+                try: 
                     collection.insert_many(file_data)
                     print(f, " successfully imported")
             except Exception as e:
